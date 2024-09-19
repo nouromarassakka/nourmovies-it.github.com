@@ -1,0 +1,825 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "SUSE",sans-serif;
+
+}
+body {
+    font-family: "SUSE",sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  
+section{
+    width: 100%;
+    height: 100vh;
+    background: #171717;
+}
+section nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5% 8px 5%;
+    background: #171717;
+}
+section nav .logo h1{
+    font-size: 25px;
+    color:aliceblue;
+    cursor: pointer;
+}
+section nav .logo h1 span{
+    color:darkred;
+    margin-left: 8px;
+    text-decoration: underline;
+    font-family: "dancing script";
+    font-size: 35px;
+}
+section nav .right ul{
+    list-style: none;
+}
+section nav .right ul li{
+    display: inline-block;
+    margin: 0 5px;
+}
+section nav .right ul li a{
+    color:aliceblue;
+    text-decoration: none;
+    transition: 0.5s;
+}
+section nav .right ul li a:hover{
+    color:darkred;
+}
+.swiper {
+    width: 95%;
+    height: 90%;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .swiper::selection{
+    user-select: none;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide .image .black{
+    width:100%;
+    height:100%;
+    position: absolute;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.0),rgba(0,0,0,0.9));
+  }
+  .swiper-slide .image .black h1{
+    font-size: 40px;
+    text-align: left;
+    position:relative;
+    top:50%;
+    left:5%;
+    color:darkred;
+    font-family:"dancing script";
+    font-weight: 700;
+  }
+  .swiper-slide .image .black .star{
+    color:darkred;
+    text-align: left;
+    font-size:16px ;
+    margin: 10px 0;
+    position: relative;
+    top: 50%;
+    left:5%;
+  }
+  .swiper-slide .image .black p{
+    width:550px;
+    text-align:justify;
+    font-size: 16px;
+    color:antiquewhite;
+    margin: 10px 0;
+    position: relative;
+    top:50%;
+    left:5%;
+    line-height: 23px;
+    font-family: "SUSE";
+  }
+  .swiper-slide .image .black .genere{
+    text-align: left;
+    font-size: 16px;
+    margin:13px 0;
+    position:relative;
+    top:50%;
+    left:5%;
+    
+  }
+  .swiper-slide .image .black .genere a.catagory{
+    background: white;
+    text-decoration:none ;
+    padding: 5px 25px;
+    margin: 0 5px;
+    border-radius: 5%; 
+    color: darkred;
+    transition: 0.5s;
+  }
+  .swiper-slide .image .black .genere a.catagory:hover{
+    background: #171717;
+  }
+  .swiper-slide .image .black .genere a.catagory span{
+    color:darkred;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .swiper-slide .image .black .watch{
+    width:700px;
+    text-align: left;
+    display: flex;
+    font-size:16px ;
+    margin:10px 0;
+    position: relative;
+    top:50%;
+    left: 5%;
+  }
+  .swiper-slide .image .black .watch i{
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkred;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .swiper-slide .image .black .watch p{
+    position: relative;
+    left: 15px;
+    font-family: "SUSE";
+  } 
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* highly recommended */
+  .second{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    padding-bottom: 25px;
+    background: #171717;
+  }
+  .second .latest{
+    width:95%;
+    margin:0 auto;
+  }
+  .second .latest h1{
+    font-family: "dancing script",sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    color:darkred;
+    margin-bottom: 20px;
+  }
+  .second .latest .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .second .latest .box .card{
+    width: 250px;
+    height: 370px;
+    margin: 10px;
+    overflow:hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+  .second .latest .box .card .details{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 8px;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  .second .latest .box .card:hover .details{
+    opacity:1;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.0),rgba(0,0,0,0.7));
+  }
+  .second .latest .box .card .details .left{
+    position: absolute;
+    bottom: 0;
+    color:#fff;
+    transform: translateX(-100px);
+    transition: 0.7s;
+    opacity: 0;
+  }
+  .second .latest .box .card:hover .details .left{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .second .latest .box .card .details .left p.name{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+  }
+  .second .latest .box .card .details .left .date_quality{
+    display: flex;
+    align-items: center;
+  }
+  .second .latest .box .card .details .left .date_quality p.quality{
+    width: 30px;
+    font-size: 13px;
+    background:darkred;
+    color: #282931;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-weight: bold;
+  } 
+  .second .latest .box .card .details .left .date_quality p.date{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 4px;
+  }
+  .second .latest .box .card .details .left p.category{
+    margin-left:10px ;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .second .latest .box .card .details .left .info{
+    display: flex;
+    align-items: center;
+    margin-bottom:10px ;
+  }
+  .second .latest .box .card .details .left .rate{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .second .latest .box .card .details .left .info .rate i{
+    font-size: 12px;
+    color:darkred;
+    margin-right: 5px;
+  }
+  .second .latest .box .card .details .left .info .rate p{
+    font-size: 12px;
+  }
+  .second .latest .box .card .details .left .info .time{
+   display: flex;
+   align-items: center;
+  }
+  .second .latest .box .card .details .left .info .time i{
+    font-size: 12px;
+    color: darkred;
+    margin-left: 5px;
+  }
+  .second .latest .box .card .details .left .info .time p{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .second .latest .box .card .details .right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transform: translateX(100px);
+    transition: 0.4s;
+    opacity:0;
+  }
+  .second .latest .box .card:hover .details .right{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .second .latest .box .card .details .right i{
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkred;
+    border-radius: 50%;
+    cursor: pointer;
+    color:black;
+    margin: 0 20px 8px 0;
+}
+.second .latest .box .card img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+  /*......popular*/
+  
+   .upcoming{
+    width:100%;
+    height:auto;
+    min-height: 200px;
+    margin:0 auto;
+    padding-bottom: 25px;
+    background-color: #171717;
+  } 
+   .upcoming .movie_box{
+    width:95%;
+    margin:0 auto;
+  }
+  .upcoming .movie_box h1{
+    font-size:35px;
+    font-weight: 700;
+    color:darkred;
+    margin-bottom:20px;
+    font-family: "dancing script";
+  }
+  .upcoming .movie_box .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .upcoming .movie_box .box .card{
+    width: 250px;
+    height: 370px;
+    margin: 10px;
+    overflow:hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+  .upcoming .movie_box .box .card .details{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 8px;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  .upcoming .movie_box .box .card:hover .details{
+    opacity:1;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.0),rgba(0,0,0,0.7));
+  }
+  .upcoming .movie_box .box .card .details .left{
+    position: absolute;
+    bottom: 0;
+    color:#fff;
+    transform: translateX(-100px);
+    transition: 0.7s;
+    opacity: 0;
+  }
+  .upcoming .movie_box .box .card:hover .details .left{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .upcoming .movie_box .box .card .details .left p.name{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+  }
+  .upcoming .movie_box .box .card .details .left .date_quality{
+    display: flex;
+    align-items: center;
+  }
+  .upcoming .movie_box .box .card .details .left .date_quality p.quality{
+    width: 30px;
+    font-size: 13px;
+    background:darkred;
+    color: #282931;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-weight: bold;
+  } 
+  .upcoming .movie_box .box .card .details .left .date_quality p.date{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 4px;
+  }
+  .upcoming .movie_box .box .card .details .left p.category{
+    margin-left:10px ;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .upcoming .movie_box .box .card .details .left .info{
+    display: flex;
+    align-items: center;
+    margin-bottom:10px ;
+  }
+ 
+  .upcoming .movie_box .box .card .details .left .info .time{
+   display: flex;
+   align-items: center;
+  }
+  .upcoming .movie_box .box .card .details .left .info .time i{
+    font-size: 12px;
+    color: darkred;
+    margin-left: 5px;
+  }
+  .upcoming .movie_box .box .card .details .left .info .time p{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+ .upcoming .movie_box .box .card .details .right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transform: translateX(100px);
+    transition: 0.4s;
+    opacity:0;
+  }
+  .upcoming .movie_box .box .card:hover .details .right{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .upcoming .movie_box .box .card .details .right i{
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkred;
+    border-radius: 50%;
+    cursor: pointer;
+    color:black;
+    margin: 0 20px 8px 0;
+}
+.upcoming .movie_box .box .card img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+} 
+
+/* series__-_---______ */
+
+.series{
+    width:100%;
+    height:auto;
+    min-height: 200px;
+    margin:0 auto;
+    padding-bottom: 25px;
+    background-color: #171717;
+  } 
+
+.series .movies_box{
+    width:95%;
+    margin:0 auto;
+  }
+  .series .movies_box h1{
+    font-size:35px;
+    font-weight: 700;
+    color:darkred;
+    margin-bottom:20px;
+    font-family: "dancing script";
+  }
+  .series .movies_box .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .series .movies_box .box .card{
+    width: 250px;
+    height: 370px;
+    margin: 10px;
+    overflow:hidden;
+    border-radius: 8px;
+    position: relative;
+  }
+  .series .movies_box .box .card .details{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
+    border-radius: 8px;
+    transition: 0.3s;
+    opacity: 0;
+  }
+  .series .movies_box .box .card:hover .details{
+    opacity:1;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.0),rgba(0,0,0,0.7));
+  }
+  .series .movies_box .box .card .details .left{
+    position: absolute;
+    bottom: 0;
+    color:#fff;
+    transform: translateX(-100px);
+    transition: 0.7s;
+    opacity: 0;
+  }
+  .series .movies_box .box .card:hover .details .left{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .series .movies_box .box .card .details .left p.name{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family:sans-serif;
+  }
+  .series .movies_box .box .card .details .left .date_quality{
+    display: flex;
+    align-items: center;
+  }
+  .series .movies_box .box .card .details .left .date_quality p.quality{
+    width: 30px;
+    font-size: 13px;
+    background:darkred;
+    color: #282931;
+    margin-left: 10px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-weight: bold;
+  } 
+  .series .movies_box .box .card .details .left .date_quality p.date{
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 4px;
+  }
+  .series .movies_box .box .card .details .left p.category{
+    margin-left:10px ;
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .series .movies_box .box .card .details .left .info{
+    display: flex;
+    align-items: center;
+    margin-bottom:10px ;
+  }
+ 
+  .series .movies_box .box .card .details .left .info .time{
+   display: flex;
+   align-items: center;
+  }
+  .series .movies_box .box .card .details .left .info .time i{
+    font-size: 12px;
+    color: darkred;
+    margin-left: 5px;
+  }
+  .series .movies_box .box .card .details .left .info .time p{
+    font-size: 12px;
+    margin-left: 5px;
+  }
+  .series .movies_box .box .card .details .right{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transform: translateX(100px);
+    transition: 0.4s;
+    opacity:0;
+  }
+  .series .movies_box .box .card:hover .details .right{
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .series .movies_box .box .card .details .right i{
+    width:40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    background-color: darkred;
+    border-radius: 50%;
+    cursor: pointer;
+    color:black;
+    margin: 0 20px 8px 0;
+}
+.series .movies_box .box .card img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+} 
+  
+
+#newsletter{
+    width:100%;
+    height:auto;
+    padding:0 0 40px 0;
+    background-color: #171717;
+}
+#newsletter h1{
+    text-align: center;
+    color:darkred;
+    font-family: "dancing script";
+}
+#newsletter .news_card{
+    width: 550px;
+    margin:0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#newsletter .news_card input{
+    width: 550px;
+    height: 55px;
+    margin-top: 20px;
+    border-radius: 35px;
+    border: 3px solid darkred;
+    padding: 0 10px;
+    outline:none;
+    background: none;
+    color:antiquewhite
+}
+#newsletter .news_card button{
+    position: absolute; 
+    right: 0%;
+    width: 100px;
+    height: 45px;
+    border-radius: 25px;
+    margin-top: 20px;
+    margin-right: 8px;
+    border: 0;
+    outline: none;
+    background-color: darkred;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#end{
+    background: #171717;
+    text-align: center;
+    color: antiquewhite;
+    padding: 15px 0;
+}
+ #end span{
+    color:whitesmoke;
+}
+#end span i{
+    margin: 0 8px;
+    color: darkred;
+}
+@media (max-width: 1200px) {
+    .swiper {
+        width: 90%;
+        height: 85%;
+    }
+
+    .swiper-slide .black h1 {
+        font-size: 30px;
+    }
+
+    .second .latest .box .card {
+        width: 220px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 992px) {
+    section nav .logo h1 {
+        font-size: 22px;
+    }
+
+    section nav .logo h1 span {
+        font-size: 28px;
+    }
+
+    section nav .right ul li {
+        margin: 0 3px;
+    }
+
+    section nav .right ul li a {
+        font-size: 14px;
+    }
+
+    .swiper-slide .black h1 {
+        font-size: 28px;
+    }
+
+    .second .latest .box {
+        justify-content: center;
+    }
+
+    .second .latest .box .card {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    section nav .logo h1 {
+        font-size: 20px;
+    }
+
+    section nav .logo h1 span {
+        font-size: 25px;
+    }
+
+    section nav .right ul li a {
+        font-size: 12px;
+    }
+
+    .swiper {
+        width: 85%;
+        height: 80%;
+    }
+
+    .swiper-slide .black h1 {
+        font-size: 24px;
+    }
+
+    .second .latest h1 {
+        font-size: 28px;
+    }
+
+    .second .latest .box .card {
+        width: 180px;
+        height: 270px;
+    }
+}
+
+@media (max-width: 576px) {
+    section nav {
+        flex-direction: column;
+    }
+
+    section nav .right ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .swiper {
+        width: 80%;
+        height: 75%;
+    }
+
+    .swiper-slide .black h1 {
+        font-size: 20px;
+    }
+
+    .second .latest .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .second .latest .box .card {
+        width: 160px;
+        height: 240px;
+    }
+}
+
+@media (max-width: 360px) {
+    section nav .logo h1 {
+        font-size: 18px;
+    }
+
+    section nav .logo h1 span {
+        font-size: 22px;
+    }
+
+    section nav .right ul li a {
+        font-size: 10px;
+    }
+
+    .swiper {
+        width: 75%;
+        height: 70%;
+    }
+
+    .swiper-slide .black h1 {
+        font-size: 18px;
+    }
+
+    .second .latest h1 {
+        font-size: 24px;
+    }
+
+    .second .latest .box .card {
+        width: 140px;
+        height: 220px;
+    }
+}
